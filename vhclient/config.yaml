@@ -12,7 +12,12 @@ startup: services
 host_network: true
 hassio_api: true
 homeassistant_api: true
-privileged: true
+privileged:
+  - SYS_ADMIN
+  - SYS_RAWIO
+  - NET_ADMIN
+devices:
+  - /dev/bus/usb
 apparmor: false
 map:
   - type: homeassistant_config
