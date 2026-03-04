@@ -12,8 +12,7 @@ startup: services
 host_network: true
 hassio_api: true
 homeassistant_api: true
-privileged:
-  - SYS_ADMIN
+privileged: true
 apparmor: false
 map:
   - type: homeassistant_config
